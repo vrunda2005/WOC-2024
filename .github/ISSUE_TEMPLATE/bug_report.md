@@ -14,6 +14,7 @@ Thanks for taking the time to fill out this bug report.
 
 ### Bug Details
 
+<!-- Please delete the example contents provided to you before submitting the issue -->
 **Describe the bug**
 A clear and concise description of what the bug is.
 
@@ -32,10 +33,9 @@ If applicable, add screenshots to help explain your problem.
 
 ---
 
-### Environment
+### Environment (If needed)
 
 - **Browser/OS**: [e.g., Chrome 107, Windows 10]
-- **Version**: [e.g., v1.2.3]
 
 ---
 
