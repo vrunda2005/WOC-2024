@@ -1,9 +1,11 @@
 ---
 name: Bug Report
-about: "Welcome to the PClub WOC 4.0 Project! 🐛🎉 Thanks for helping us improve!"
+about: "Welcome to the PClub WOC 4.0 Project! \U0001F41B\U0001F389 Thanks for helping
+  us improve!"
 title: "[Bug]: "
 labels: bug
-assignees: ""
+assignees: ''
+
 ---
 
 # Welcome to the PClub WOC 4.0 Project! 👋🎉
