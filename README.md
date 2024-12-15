@@ -1,7 +1,6 @@
 # Winter of Code 4.0 (WOC) - AU Programming Club Website
 
 ## 📌 Project Overview
-
 Welcome to the Winter of Code 4.0 (WOC) project! This initiative is designed to help budding open-source contributors gain practical experience by building the AU Programming Club (AU Pclub) website.
 
 ### 🎯 Project Goals
@@ -10,8 +9,12 @@ Welcome to the Winter of Code 4.0 (WOC) project! This initiative is designed to 
 - Create a functional website for the AU Programming Club
 - Help participants prepare for contributions to larger open-source projects
 
-## 🚀 Getting Started
+## 🎨 Design Reference
+### Figma Design
+- **Design Link**: [here](https://www.figma.com/design/kHauIvxVeOb8diy8jO6jJd/Website?node-id=0-1&t=VaLTx4vGpSXga6dU-1)
+- Contributors are expected to implement the website following this design
 
+## 🚀 Getting Started
 ### Contribution Guidelines
 Please refer to our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed information on how to contribute to this project.
 
