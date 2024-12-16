@@ -14,6 +14,11 @@ Welcome to the Winter of Code 4.0 (WOC) project! This initiative is designed to 
 - **Design Link**: [here](https://www.figma.com/design/kHauIvxVeOb8diy8jO6jJd/Website?node-id=0-1&t=VaLTx4vGpSXga6dU-1)
 - Contributors are expected to implement the website following this design
 
+## Tech Stack
+- React.js
+- Chakra UI
+- Github Actions
+
 ## 🚀 Getting Started
 ### Contribution Guidelines
 Please refer to our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed information on how to contribute to this project.
@@ -33,6 +38,7 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
 - Open-Source Contribution Practices
 
 ## 🆘 Need Help?
+- Head on to [Pclub Discord Server](https://discord.gg/xucxx98e) and ask for doubts or meet with maintainer
 - Open an Issue with a detailed description
 - Reach out to maintainers in comments
 
