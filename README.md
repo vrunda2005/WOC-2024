@@ -29,6 +29,8 @@ Check out [EVALUATION.md](EVALUATION.md) to understand how contributions will be
 ### Code of Conduct
 Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inclusive environment.
 
+**Note**: Open/Start working on the PR only when you are assigned to it.
+
 ## 🏆 What You'll Learn
 - Web Development
 - Responsive Design
