@@ -48,7 +48,7 @@ Before setting up the project, ensure you have the following installed on your s
    npm run dev
    ```
 
-   This will start the Vite development server, and you can view the project in your browser at `http://localhost:3000`.
+   This will start the Vite development server, and you can view the project in your browser at `http://localhost:5173`.
 
 If you are looking forward to contributing, please create a new *branch* before making any changes. Learn more about it from [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 
