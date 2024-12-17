@@ -15,8 +15,12 @@ Welcome to the Winter of Code 4.0 (WOC) project! This initiative is designed to 
 - Contributors are expected to implement the website following this design
 
 ## Tech Stack
-- React.js
-- Chakra UI
+### Languages:
+  - Javascript
+  - CSS
+### Frameworks
+  - React.js
+### CI
 - Github Actions
 
 ## 🚀 Getting Started
@@ -38,6 +42,12 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
 - Git Workflow
 - Collaborative Development
 - Open-Source Contribution Practices
+
+## Big Thanks to Amazing Contributors 🎉
+
+<a href="https://github.com/Programming-Club-Ahmedabad-University/WOC-2024/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Programming-Club-Ahmedabad-University/WOC-2024" />
+</a>
 
 ## 🆘 Need Help?
 - Head on to [Pclub Discord Server](https://discord.gg/xucxx98e) and ask for doubts or meet with maintainer
