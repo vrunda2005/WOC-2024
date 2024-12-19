@@ -10,8 +10,8 @@ This guide will walk you through the steps to get the project up and running on 
 
 Before setting up the project, ensure you have the following installed on your system:
 
-- [Node.js](https://nodejs.org/) (v18 or later)
-- [npm](https://www.npmjs.com/) (comes bundled with Node.js)
+- [Node.js](https://nodejs.org/) **(v18 or later) (preferred any version >= 20)**
+- [npm](https://www.npmjs.com/) (comes bundled with Node.js i.e. you do not need to install this seperately)
 - [Git](https://git-scm.com/downloads)
 
 ## Getting Started
