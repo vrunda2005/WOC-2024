@@ -79,7 +79,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a 
+              <a
               href="#contact-us" 
               className={activeLink === "#contact-us" ? 'active' : ''}
               onClick={() => setActiveLink("#contact-us")}
