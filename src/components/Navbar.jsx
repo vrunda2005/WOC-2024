@@ -1,6 +1,7 @@
 import {React, useEffect, useState} from 'react';
 import "../components/Navbar.css";
-import PClub_logo from "../assets/PClub.png";
+// import PClub_logo from "../assets/PClub.png";
+import PClub_logo from "/public/PClub.png";
 import Bars from "../assets/menu.png";
 
 const Navbar = () => {
