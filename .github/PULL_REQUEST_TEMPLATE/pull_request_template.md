@@ -25,8 +25,6 @@ Provide a detailed explanation of the changes made in this Pull Request [PR].
 Please ensure the following before submitting the PR:
 - [ ] I have read the `CODE_OF_CONDUCT.md` file and followed it's guidlines.
 - [ ] I have followed the design specified in the Figma file (if applicable).
-- [ ] I have run the code and confirmed there are no runtime errors.
-- [ ] I have added appropriate tests or documentation where necessary.
 
 ---
 
