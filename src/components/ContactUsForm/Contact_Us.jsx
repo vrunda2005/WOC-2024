@@ -7,10 +7,10 @@ const ContactUs = () => {
       <div className="contact-form">
         <h1>Contact Us</h1>
         <form>
-          <input placeholder="Full Name" />
-          <label>
-            <input placeholder="E-mail" /> 
-          </label>
+          <label>Full Name</label>
+            <input />
+          <label>E-mail</label>
+            <input />           
           <label>
           <textarea placeholder="Message" />
           </label>
