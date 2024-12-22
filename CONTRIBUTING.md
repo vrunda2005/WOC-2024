@@ -64,6 +64,17 @@ If you are looking forward to contributing, please create a new *branch* before 
      git checkout -b add-navbar
      ```
 
+---
+
+### Note:
+
+Try to make sure you are working on latest codebase 
+
+- For this before working on any issue, you can headover to your forked repository and check for whether something like `update branch` is written there, make sure you update your branch with `Sync Fork` option (Make sure your branch is selected as `main` there)
+
+---
+
+
 You are all set now to make your changes. If there are any problem, feel free to contact us.
    
 6. Add your changes
