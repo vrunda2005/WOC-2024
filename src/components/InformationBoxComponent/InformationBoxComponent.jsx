@@ -4,12 +4,12 @@ import styles from "./InformationBoxComponentStyles";
 
 const InformationBox = ({ title, imagePath, description }) => {
   return (
-    <div style={styles.container}>
-      <div style={styles.iconContainer}>
-        <img src={imagePath} alt={`${title} icon`} style={styles.icon} />
+    <div className={styles.container}>
+      <div className={styles.iconContainer}>
+        <img src={imagePath} alt={`${title} icon`} className={styles.icon} />
       </div>
-      <h3 style={styles.title}>{title}</h3>
-      <p style={styles.description}>{description}</p>
+      <h3 className={styles.title}>{title}</h3>
+      <p className={styles.description}>{description}</p>
     </div>
   );
 };
