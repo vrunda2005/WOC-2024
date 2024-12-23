@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./InformationBoxComponentStyles";
+import styles from "./InformationBox.module.css";
 
 const InformationBox = ({ title, imagePath, description }) => {
   return (
