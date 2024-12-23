@@ -75,12 +75,13 @@
     border: none;
     border-bottom: 1px solid #ccc;
     border-radius: 0;
+    color: white;    
   }
   
   
   .contact-form button {
     padding: 10px;
-    background-color: #00bfff;
+    background-color: #004457;
     color: #fff;
     border: none;
     border-radius: 5px;
