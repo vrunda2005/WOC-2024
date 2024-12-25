@@ -1,0 +1,52 @@
+name: Update Contributors in README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Fetch Contributors and Update README
+        env:
+          # REPO_NAME: ${{ github.repository }}
+          REPO_NAME: "Programming-Club-Ahmedabad-University/WOC-2024"
+        run: |
+          # Fetch contributors' preview URL from contrib.rocks
+          CONTRIBUTORS_IMAGE_URL="https://contrib.rocks/preview?repo=Programming-Club-Ahmedabad-University%2FWOC-2024"
+
+          # Read the existing README file
+          if [ -f README.md ]; then
+            README_CONTENT=$(cat README.md)
+          else
+            echo "README.md not found!"
+            exit 1
+          fi
+
+          # Prepare the contributors' markdown section
+          CONTRIBUTORS_SECTION="<!-- CONTRIBUTORS START -->\n"
+          CONTRIBUTORS_SECTION+="![Contributors](${CONTRIBUTORS_IMAGE_URL})\n"
+          CONTRIBUTORS_SECTION+="<!-- CONTRIBUTORS END -->"
+
+          # Replace the old contributors section in README.md
+          UPDATED_README=$(echo "$README_CONTENT" | sed -e '/<!-- CONTRIBUTORS START -->/,/<!-- CONTRIBUTORS END -->/c\'"$CONTRIBUTORS_SECTION")
+
+          # Write the updated README content
+          echo "$UPDATED_README" > README.md
+
+          # Check if the file has changed
+          if ! git diff --exit-code README.md; then
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "Update contributors section in README.md using contrib.rocks"
+            git push
+          else
+            echo "No changes detected in README.md"
+          fi
