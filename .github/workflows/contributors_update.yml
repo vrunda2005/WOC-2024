@@ -21,9 +21,12 @@ jobs:
           # Fetch contributors' preview URL from contrib.rocks
           CONTRIBUTORS_IMAGE_URL="https://contrib.rocks/preview?repo=Programming-Club-Ahmedabad-University%2FWOC-2024"
 
+          README_PATH="../README.md" 
+
+           
           # Read the existing README file
-          if [ -f README.md ]; then
-            README_CONTENT=$(cat README.md)
+          if [ -f "$README_PATH" ]; then
+            README_CONTENT=$(cat "$README_PATH")
           else
             echo "README.md not found!"
             exit 1
@@ -38,13 +41,13 @@ jobs:
           UPDATED_README=$(echo "$README_CONTENT" | sed -e '/<!-- CONTRIBUTORS START -->/,/<!-- CONTRIBUTORS END -->/c\'"$CONTRIBUTORS_SECTION")
 
           # Write the updated README content
-          echo "$UPDATED_README" > README.md
+          echo "$UPDATED_README" > "$README_PATH"
 
           # Check if the file has changed
-          if ! git diff --exit-code README.md; then
+          if ! git diff --exit-code "$README_PATH"; then
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
-            git add README.md
+            git add "$README_PATH"
             git commit -m "Update contributors section in README.md using contrib.rocks"
             git push
           else
