@@ -23,41 +23,54 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Automatically get the repository name
-          REPO_NAME="${{ github.repository }}"
+          # Manually specify the repository name
+          REPO_NAME="Programming-Club-Ahmedabad-University/WOC-2024"
 
           # File to update
           README_PATH="README.md"
 
-          # Fetch top 4 contributors from GitHub API
-          CONTRIBUTORS=$(curl -H "Authorization: token $GH_TOKEN" -s "https://api.github.com/repos/${REPO_NAME}/contributors?per_page=4" | \
-            jq -r '.[] | "- [![@\(.login)](\(.avatar_url)?size=50)](https://github.com/\(.login)) [@\(.login)](https://github.com/\(.login))"')
+          # Fetch contributors from GitHub API and format the output for display
+          CONTRIBUTORS=$(curl -H "Authorization: Bearer $GH_TOKEN" -s \
+            "https://api.github.com/repos/${REPO_NAME}/contributors?per_page=10" | \
+            jq -r '.[] | "- [@\(.login)](https://github.com/\(.login))"')
 
-          # Check if contributors were fetched successfully
           if [ -z "$CONTRIBUTORS" ]; then
-            echo "No contributors found"
+            echo "No contributors found. Exiting."
             exit 1
           fi
+
+          # Printing the fetched contributors for debugging
+          echo "Fetched Contributors:"
+          echo "$CONTRIBUTORS"
 
           # Get the current timestamp in IST
           LAST_UPDATED=$(TZ='Asia/Kolkata' date '+%Y-%m-%d %I:%M:%S %p IST')
 
-          # Generate contributors section
-          CONTRIBUTORS_SECTION="## 👥 Contributors\n\n"
-          CONTRIBUTORS_SECTION+="<a href=\"https://github.com/${REPO_NAME}/graphs/contributors\">\n"
-          CONTRIBUTORS_SECTION+="  <img src=\"https://contrib.rocks/image?repo=${REPO_NAME}\" alt=\"Contributors Group Image\" />\n"
-          CONTRIBUTORS_SECTION+="</a>\n\n"
+          # new contributors section
+          CONTRIBUTORS_SECTION="## 🎉 Big Thanks to Amazing Contributors\n\n"
+          CONTRIBUTORS_SECTION+="<p align=\"center\">\n"
+          CONTRIBUTORS_SECTION+="  <a href=\"https://github.com/${REPO_NAME}/graphs/contributors\">\n"
+          CONTRIBUTORS_SECTION+="    <img src=\"https://contrib.rocks/image?repo=${REPO_NAME}\" alt=\"Contributors Group Image\" style=\"width:350px; height:auto; border-radius:15px; border:2px solid #ddd; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\" />\n"
+          CONTRIBUTORS_SECTION+="  </a>\n"
+          CONTRIBUTORS_SECTION+="</p>\n\n"
+
           CONTRIBUTORS_SECTION+="### Top Contributors\n"
           CONTRIBUTORS_SECTION+="${CONTRIBUTORS}\n\n"
-          CONTRIBUTORS_SECTION+="<p><i>Last updated: ${LAST_UPDATED}</i></p>\n"
+          CONTRIBUTORS_SECTION+="<p><i>Last updated: ${LAST_UPDATED}</i></p>\n<!-- END -->"
 
-          # Replace the relevant section in the README
-          UPDATED_README=$(sed -e '/### Top Contributors/,/<!-- END -->/c\'"$CONTRIBUTORS_SECTION" "$README_PATH")
+          # Debug the section before updating README
+          echo "Updating README with the following content:"
+          echo -e "$CONTRIBUTORS_SECTION"
 
-          # Write changes back to README.md
-          echo "$UPDATED_README" > "$README_PATH"
+          # Useing awk to insert the new contributors section
+          awk -v block="$CONTRIBUTORS_SECTION" '
+          BEGIN { start = 0 }
+            /## 🎉 Big Thanks to Amazing Contributors/ { start = 1; print block; next }
+            /<!-- END -->/ { start = 0 }
+            !start { print }
+          ' "$README_PATH" > README.tmp && mv README.tmp "$README_PATH"
 
-          # Commit and push changes if there's a difference
+          # Commit and push changes if README is modified
           if ! git diff --exit-code "$README_PATH"; then
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
