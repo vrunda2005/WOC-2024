@@ -9,7 +9,7 @@ function App() {
     
     {
         name: 'CSS Workshop',
-        description: 'This workshop is designed for beginners to dive into the basics of CSS. Over the course of the event, participants will learn how to create simple, responsive layouts and style their websites with modern CSS techniques, fostering creativity and confidence in web design.',
+        description: 'This workshop is designed for beginners to dive into the basics of CSS. Over the course of the event, participants will learn how to create simple, responsive layouts and style their websites with modern CSS techniques, fostering creativity and confidence in web design.',//keep the description brief !!
         date: '2024-12-25',
         time: '10:00 AM',
         venue: 'GICT 420',
