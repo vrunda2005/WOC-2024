@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { Route, Routes } from 'react-router';
 import './App.css';
 import Navbar from './components/Navbar';
-import UpcomingEventCard from './components/UpcomingEventCard'; // Import the UpcomingEventCard component
+import HomePage from './pages/HomePage';
+import PastEvents from './pages/PastEvents';
 
 function App() {
   // Define a function to handle event data
@@ -32,26 +33,15 @@ function App() {
 
 
   return (
-    <>
-      <Navbar />
-      <div className="event-list">
-        {/* Render UpcomingEventCard for each event */}
-        {events.map((event, index) => (
-          <UpcomingEventCard
-            key={index}
-            name={event.name}
-            description={event.description}
-            date={event.date}
-            time={event.time}
-            venue={event.venue}
-            teamsize={event.teamsize}
-          />
-        ))}
-      </div>
-  
-     
-    </>
-  );
+    <div className='main'>
+      <Navbar/>
+
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/past-events' element={<PastEvents/>}/>
+      </Routes>
+    </div>
+  )
 }
 
 export default App;

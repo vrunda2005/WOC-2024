@@ -3,6 +3,7 @@ import "../components/Navbar.css";
 // import PClub_logo from "../assets/PClub.png";
 import PClub_logo from "/public/PClub.png";
 import Bars from "../assets/menu.png";
+import { Link } from 'react-router';
 
 const Navbar = () => {
 
@@ -36,7 +37,7 @@ const Navbar = () => {
 
   // Managing active link
 
-  const [activeLink, setActiveLink] = useState("#home");
+  const [activeLink, setActiveLink] = useState("/");
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     window.addEventListener("scroll", () => {
@@ -53,22 +54,22 @@ const Navbar = () => {
         <img src={PClub_logo} alt="PClub Logo" className='logo'/>
         <ul className={`list-container ${menuOpen ? 'open' : ''}`}>
             <li>
-              <a 
-              href="#home" 
-              className={activeLink === "#home" ? 'active' : ''}
-              onClick={() => setActiveLink("#home")}
+              <Link 
+              to="/" 
+              className={activeLink === "/" ? 'active' : ''}
+              onClick={() => setActiveLink("/")}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-              href="#past-events" 
-              className={activeLink === "#past-events" ? 'active' : ''}
-              onClick={() => setActiveLink("#past-events")}
+              <Link 
+              to="/past-events" 
+              className={activeLink === "/past-events" ? 'active' : ''}
+              onClick={() => setActiveLink("/past-events")}
               >
                 Past Events
-              </a>
+              </Link>
             </li>
             <li>
               <a 
