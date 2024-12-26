@@ -4,7 +4,12 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: "*/30 * * * *" # Runs every 30 minutes
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-readme:
@@ -16,39 +21,48 @@ jobs:
 
       - name: Fetch Contributors and Update README
         env:
-          REPO_NAME: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          CONTRIBUTORS_IMAGE_URL="https://contrib.rocks/preview?repo=Programming-Club-Ahmedabad-University%2FWOC-2024"
+          # Automatically get the repository name
+          REPO_NAME="${{ github.repository }}"
 
-          README_PATH="README.md" 
+          # File to update
+          README_PATH="README.md"
 
-          if [ -f "$README_PATH" ]; then
-            README_CONTENT=$(cat "$README_PATH")
-          else
-            echo "README.md not found!"
+          # Fetch top 4 contributors from GitHub API
+          CONTRIBUTORS=$(curl -H "Authorization: token $GH_TOKEN" -s "https://api.github.com/repos/${REPO_NAME}/contributors?per_page=4" | \
+            jq -r '.[] | "- [![@\(.login)](\(.avatar_url)?size=50)](https://github.com/\(.login)) [@\(.login)](https://github.com/\(.login))"')
+
+          # Check if contributors were fetched successfully
+          if [ -z "$CONTRIBUTORS" ]; then
+            echo "No contributors found"
             exit 1
           fi
 
-          #contributors' markdown section
-          CONTRIBUTORS_SECTION="<!-- CONTRIBUTORS START -->\n"
-          CONTRIBUTORS_SECTION+="<div align=\"center\">\n"
-          CONTRIBUTORS_SECTION+="    <a href=\"https://github.com/${REPO_NAME}/graphs/contributors\">\n"
-          CONTRIBUTORS_SECTION+="        <img src=\"${CONTRIBUTORS_IMAGE_URL}\" />\n"
-          CONTRIBUTORS_SECTION+="    </a>\n"
-          CONTRIBUTORS_SECTION+="</div>\n"
-          CONTRIBUTORS_SECTION+="<!-- CONTRIBUTORS END -->"
+          # Get the current timestamp in IST
+          LAST_UPDATED=$(TZ='Asia/Kolkata' date '+%Y-%m-%d %I:%M:%S %p IST')
 
-          # updating readme.md
-          UPDATED_README=$(echo "$README_CONTENT" | sed -e '/<!-- CONTRIBUTORS START -->/,/<!-- CONTRIBUTORS END -->/c\'"$CONTRIBUTORS_SECTION")
+          # Generate contributors section
+          CONTRIBUTORS_SECTION="## 👥 Contributors\n\n"
+          CONTRIBUTORS_SECTION+="<a href=\"https://github.com/${REPO_NAME}/graphs/contributors\">\n"
+          CONTRIBUTORS_SECTION+="  <img src=\"https://contrib.rocks/image?repo=${REPO_NAME}\" alt=\"Contributors Group Image\" />\n"
+          CONTRIBUTORS_SECTION+="</a>\n\n"
+          CONTRIBUTORS_SECTION+="### Top Contributors\n"
+          CONTRIBUTORS_SECTION+="${CONTRIBUTORS}\n\n"
+          CONTRIBUTORS_SECTION+="<p><i>Last updated: ${LAST_UPDATED}</i></p>\n"
 
+          # Replace the relevant section in the README
+          UPDATED_README=$(sed -e '/### Top Contributors/,/<!-- END -->/c\'"$CONTRIBUTORS_SECTION" "$README_PATH")
+
+          # Write changes back to README.md
           echo "$UPDATED_README" > "$README_PATH"
 
-          # Checking if the file has changed
+          # Commit and push changes if there's a difference
           if ! git diff --exit-code "$README_PATH"; then
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git add "$README_PATH"
-            git commit -m "Update contributors section in README.md using contrib.rocks"
+            git commit -m "Update contributors section in README.md"
             git push
           else
             echo "No changes detected in README.md"

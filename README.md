@@ -60,13 +60,14 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
 
 ## 👥 Contributors
 
-<!-- CONTRIBUTORS START -->
-<div align="center">
-    <a href="https://github.com/Programming-Club-Ahmedabad-University/WOC-2024/graphs/contributors">
-        <img src="https://contrib.rocks/preview?repo=Programming-Club-Ahmedabad-University%2FWOC-2024" />
-    </a>
-</div>
-<!-- CONTRIBUTORS END -->
+<a href="https://github.com/Programming-Club-Ahmedabad-University/WOC-2024/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Programming-Club-Ahmedabad-University/WOC-2024" alt="Contributors Group Image" />
+</a>
+
+### Top Contributors
+
+<!-- START -->
+<!-- END -->
 
 ## 🆘 Need Help?
 
