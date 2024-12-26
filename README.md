@@ -58,15 +58,16 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
 - Collaborative Development
 - Open-Source Contribution Practices
 
-## 👥 Contributors
+## 🎉 Big Thanks to Amazing Contributors
 
-<a href="https://github.com/Programming-Club-Ahmedabad-University/WOC-2024/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Programming-Club-Ahmedabad-University/WOC-2024" alt="Contributors Group Image" />
-</a>
+<p align="center">
+  <a href="https://github.com/Programming-Club-Ahmedabad-University/WOC-2024/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=Programming-Club-Ahmedabad-University/WOC-2024" alt="Contributors Group Image" style="width:350px; height:auto; border-radius:15px; border:2px solid #ddd; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+  </a>
+</p>
 
 ### Top Contributors
 
-<!-- START -->
 <!-- END -->
 
 ## 🆘 Need Help?
