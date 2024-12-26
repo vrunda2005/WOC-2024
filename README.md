@@ -67,7 +67,16 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
 </p>
 
 ### Top Contributors
+- [@Saumya40-codes](https://github.com/Saumya40-codes)
+- [@vrunda2005](https://github.com/vrunda2005)
+- [@PrashamMehta-04](https://github.com/PrashamMehta-04)
+- [@KushalXCoder](https://github.com/KushalXCoder)
+- [@Bansi-Mahkana](https://github.com/Bansi-Mahkana)
+- [@Vishv0407](https://github.com/Vishv0407)
+- [@kash2104](https://github.com/kash2104)
 
+<p><i>Last updated: 2024-12-26 09:18:46 PM IST</i></p>
+<!-- END -->
 <!-- END -->
 
 ## 🆘 Need Help?
