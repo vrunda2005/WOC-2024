@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -15,16 +16,12 @@ jobs:
 
       - name: Fetch Contributors and Update README
         env:
-          # REPO_NAME: ${{ github.repository }}
-          REPO_NAME: "Programming-Club-Ahmedabad-University/WOC-2024"
+          REPO_NAME: ${{ github.repository }}
         run: |
-          # Fetch contributors' preview URL from contrib.rocks
           CONTRIBUTORS_IMAGE_URL="https://contrib.rocks/preview?repo=Programming-Club-Ahmedabad-University%2FWOC-2024"
 
-          README_PATH="../README.md" 
+          README_PATH="README.md" 
 
-           
-          # Read the existing README file
           if [ -f "$README_PATH" ]; then
             README_CONTENT=$(cat "$README_PATH")
           else
@@ -32,18 +29,21 @@ jobs:
             exit 1
           fi
 
-          # Prepare the contributors' markdown section
+          #contributors' markdown section
           CONTRIBUTORS_SECTION="<!-- CONTRIBUTORS START -->\n"
-          CONTRIBUTORS_SECTION+="![Contributors](${CONTRIBUTORS_IMAGE_URL})\n"
+          CONTRIBUTORS_SECTION+="<div align=\"center\">\n"
+          CONTRIBUTORS_SECTION+="    <a href=\"https://github.com/${REPO_NAME}/graphs/contributors\">\n"
+          CONTRIBUTORS_SECTION+="        <img src=\"${CONTRIBUTORS_IMAGE_URL}\" />\n"
+          CONTRIBUTORS_SECTION+="    </a>\n"
+          CONTRIBUTORS_SECTION+="</div>\n"
           CONTRIBUTORS_SECTION+="<!-- CONTRIBUTORS END -->"
 
-          # Replace the old contributors section in README.md
+          # updating readme.md
           UPDATED_README=$(echo "$README_CONTENT" | sed -e '/<!-- CONTRIBUTORS START -->/,/<!-- CONTRIBUTORS END -->/c\'"$CONTRIBUTORS_SECTION")
 
-          # Write the updated README content
           echo "$UPDATED_README" > "$README_PATH"
 
-          # Check if the file has changed
+          # Checking if the file has changed
           if ! git diff --exit-code "$README_PATH"; then
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
