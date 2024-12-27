@@ -23,47 +23,38 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Manually specify the repository name
+          # repository name
           REPO_NAME="Programming-Club-Ahmedabad-University/WOC-2024"
 
-          # File to update
           README_PATH="README.md"
 
-          # Fetch contributors from GitHub API and format the output for display
-          CONTRIBUTORS=$(curl -H "Authorization: Bearer $GH_TOKEN" -s \
+          # Fetch contributors 
+            CONTRIBUTORS=$(curl -H "Authorization: Bearer $GH_TOKEN" -s \
             "https://api.github.com/repos/${REPO_NAME}/contributors?per_page=10" | \
-            jq -r '.[] | "- [@\(.login)](https://github.com/\(.login))"')
+            jq -r '.[] | "<p style=\"display: flex; align-items: center; margin-bottom: 8px;\">\n  <img src=\"\(.avatar_url)\" alt=\"avatar\" style=\"width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;\" />\n  <a href=\"https://github.com/\(.login)\" style=\"font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;\">@\(.login)</a>\n</p>"')
 
-          # Ensure contributors were fetched
+
           if [ -z "$CONTRIBUTORS" ]; then
             echo "No contributors found. Exiting."
             exit 1
           fi
 
-          # Print the fetched contributors for debugging
+          # Print the fetched contributors
           echo "Fetched Contributors:"
           echo "$CONTRIBUTORS"
 
-          # Get the current timestamp in IST
           LAST_UPDATED=$(TZ='Asia/Kolkata' date '+%Y-%m-%d %I:%M:%S %p IST')
 
           # Prepare new contributors section
           CONTRIBUTORS_SECTION="## 🎉 Big Thanks to Amazing Contributors\n\n"
-          CONTRIBUTORS_SECTION+="<p align=\"center\">\n"
-          CONTRIBUTORS_SECTION+="  <a href=\"https://github.com/${REPO_NAME}/graphs/contributors\">\n"
-          CONTRIBUTORS_SECTION+="    <img src=\"https://contrib.rocks/image?repo=${REPO_NAME}\" alt=\"Contributors Group Image\" style=\"width:350px; height:auto; border-radius:15px; border:2px solid #ddd; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\" />\n"
-          CONTRIBUTORS_SECTION+="  </a>\n"
-          CONTRIBUTORS_SECTION+="</p>\n\n"
-
-          CONTRIBUTORS_SECTION+="### Top Contributors\n"
           CONTRIBUTORS_SECTION+="${CONTRIBUTORS}\n\n"
-          CONTRIBUTORS_SECTION+="<p><i>Last updated: ${LAST_UPDATED}</i></p>\n<!-- END -->"
+          CONTRIBUTORS_SECTION+="<p><i>Last updated: ${LAST_UPDATED}</i></p>\n"
 
           # Debug the section before updating README
           echo "Updating README with the following content:"
           echo -e "$CONTRIBUTORS_SECTION"
 
-          # Use awk to insert the new contributors section
+          # Use awk to replace or append the new contributors section
           awk -v block="$CONTRIBUTORS_SECTION" '
           BEGIN { start = 0 }
             /## 🎉 Big Thanks to Amazing Contributors/ { start = 1; print block; next }
