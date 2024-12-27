@@ -60,12 +60,38 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
 
 ## 🎉 Big Thanks to Amazing Contributors
 
-## 🆘 Need Help?
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/u/115284013?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/Saumya40-codes" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@Saumya40-codes</a>
+</p>
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/u/121624195?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/vrunda2005" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@vrunda2005</a>
+</p>
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/u/133197683?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/PrashamMehta-04" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@PrashamMehta-04</a>
+</p>
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/u/168859142?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/KushalXCoder" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@KushalXCoder</a>
+</p>
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/u/174823921?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/Bansi-Mahkana" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@Bansi-Mahkana</a>
+</p>
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/u/179408243?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/Fenil-1" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@Fenil-1</a>
+</p>
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/u/126045993?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/Vishv0407" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@Vishv0407</a>
+</p>
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/u/141061817?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/kash2104" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@kash2104</a>
+</p>
 
-- Head on to [Pclub Discord Server](https://discord.gg/xucxx98e) and ask for doubts or meet with maintainer
-- Open an Issue with a detailed description
-- Reach out to maintainers in comments
+<p><i>Last updated: 2024-12-28 01:46:42 AM IST</i></p>
 
----
-
-**Happy Coding! 🚀👩‍💻👨‍💻**
