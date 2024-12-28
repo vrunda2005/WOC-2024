@@ -93,9 +93,13 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
   <a href="https://github.com/Vishv0407" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@Vishv0407</a>
 </p>
 <p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/in/15368?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/github-actions[bot]" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@github-actions[bot]</a>
+</p>
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
   <img src="https://avatars.githubusercontent.com/u/141061817?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
   <a href="https://github.com/kash2104" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@kash2104</a>
 </p>
 
-<p><i>Last updated: 2024-12-28 11:05:00 PM IST</i></p>
+<p><i>Last updated: 2024-12-28 11:47:44 PM IST</i></p>
 
