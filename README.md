@@ -77,6 +77,10 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
   <a href="https://github.com/KushalXCoder" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@KushalXCoder</a>
 </p>
 <p style="display: flex; align-items: center; margin-bottom: 8px;">
+  <img src="https://avatars.githubusercontent.com/in/15368?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/github-actions[bot]" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@github-actions[bot]</a>
+</p>
+<p style="display: flex; align-items: center; margin-bottom: 8px;">
   <img src="https://avatars.githubusercontent.com/u/174823921?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
   <a href="https://github.com/Bansi-Mahkana" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@Bansi-Mahkana</a>
 </p>
@@ -85,8 +89,8 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
   <a href="https://github.com/Fenil-1" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@Fenil-1</a>
 </p>
 <p style="display: flex; align-items: center; margin-bottom: 8px;">
-  <img src="https://avatars.githubusercontent.com/in/15368?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
-  <a href="https://github.com/github-actions[bot]" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@github-actions[bot]</a>
+  <img src="https://avatars.githubusercontent.com/u/126433929?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
+  <a href="https://github.com/Aryansukhadia" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@Aryansukhadia</a>
 </p>
 <p style="display: flex; align-items: center; margin-bottom: 8px;">
   <img src="https://avatars.githubusercontent.com/u/174343150?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
@@ -96,10 +100,6 @@ Read our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to ensure a respectful and inc
   <img src="https://avatars.githubusercontent.com/u/126045993?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
   <a href="https://github.com/Vishv0407" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@Vishv0407</a>
 </p>
-<p style="display: flex; align-items: center; margin-bottom: 8px;">
-  <img src="https://avatars.githubusercontent.com/u/141061817?v=4" alt="avatar" style="width:50px; height:50px; border-radius:50%; margin-right: 10px; border: 2px solid #fff;" />
-  <a href="https://github.com/kash2104" style="font-size: 16px; color: #0366d6; text-decoration: none; font-weight: bold;">@kash2104</a>
-</p>
 
-<p><i>Last updated: 2025-01-04 08:01:40 AM IST</i></p>
+<p><i>Last updated: 2025-01-04 08:47:21 AM IST</i></p>
 
